@@ -1,9 +1,12 @@
 #ifndef GLOBAL_REGISTRY_PLUGIN_H
 #define GLOBAL_REGISTRY_PLUGIN_H
 
-#include <godot-cpp/include/godot_cpp/classes/editor_plugin.hpp>
+// Keep it clean and standard. SCons handles the directory mapping!
+#include <godot_cpp/classes/editor_plugin.hpp>
 
 namespace godot {
+// ... rest of header code
+
 
 class GlobalRegistryPlugin : public EditorPlugin {
     GDCLASS(GlobalRegistryPlugin, EditorPlugin);

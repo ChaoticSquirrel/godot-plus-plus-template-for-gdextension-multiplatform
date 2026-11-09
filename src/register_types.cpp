@@ -6,6 +6,8 @@
 #include <godot_cpp/godot.hpp>
 
 using namespace godot;
+// ... rest of entry code
+
 
 void initialize_global_registry_module(ModuleInitializationLevel p_level) {
     if (p_level != MODULE_INITIALIZATION_LEVEL_EDITOR) {
