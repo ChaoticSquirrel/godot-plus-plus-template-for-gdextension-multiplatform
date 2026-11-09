@@ -27,8 +27,8 @@ void uninitialize_global_registry_module(ModuleInitializationLevel p_level) {
 }
 
 extern "C" {
-// The true entry point mapped inside your .gdextension file
-GDExtensionBool GDEXTENSION_API_CC global_registry_library_init(GDExtensionInterfaceGetProcAddress p_get_proc_address, const GDExtensionClassLibraryPtr p_library, GDExtensionInitialization *r_initialization) {
+// REMOVED 'GDEXTENSION_API_CC' -> This is now fully compatible with modern Godot 4.x+ bindings!
+GDExtensionBool global_registry_library_init(GDExtensionInterfaceGetProcAddress p_get_proc_address, const GDExtensionClassLibraryPtr p_library, GDExtensionInitialization *r_initialization) {
     godot::GDExtensionBinding::InitObject init_obj(p_get_proc_address, p_library, r_initialization);
 
     init_obj.register_initializer(initialize_global_registry_module);
