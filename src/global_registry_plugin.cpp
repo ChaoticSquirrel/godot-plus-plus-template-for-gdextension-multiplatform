@@ -97,3 +97,7 @@ void GlobalRegistryPlugin::_register_custom_user_nodes(String folder_path) {
     }
 
 }
+void GlobalRegistryPlugin::_exit_tree() {
+    // This can be empty, but writing it as a formal block 
+    // guarantees the MSVC compiler generates the native DLL entry hook!
+}

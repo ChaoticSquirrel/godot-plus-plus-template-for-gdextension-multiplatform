@@ -16,10 +16,10 @@ protected:
     static void _bind_methods() {} // Required by Godot's system structure
 
 public:
-    // Declare the functions that live inside your .cpp file
     void _enter_tree() override;
-    void _exit_tree() override;
+    void _exit_tree() override; // Strictly a declaration here
     void _register_custom_user_nodes(String folder_path);
+
 };
 
 } // namespace godot
