@@ -33,13 +33,6 @@ if "api_version" not in ARGUMENTS and godot_version:
     ARGUMENTS["api_version"] = godot_version
 
 env = Environment(tools=["default"], PLATFORM="")
-# Force-feed the local header repository straight to the compiler mapping
-env.Append(CPPPATH=[
-    Dir('#/godot-cpp/include').abspath,
-    Dir('#/godot-cpp/gen/include').abspath,
-    Dir('#/godot-cpp/gdextension').abspath
-])
-
 customs = [os.path.abspath("custom.py")]
 opts = Variables(customs, ARGUMENTS)
 

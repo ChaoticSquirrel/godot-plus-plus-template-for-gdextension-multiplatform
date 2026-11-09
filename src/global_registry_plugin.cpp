@@ -1,11 +1,14 @@
 #include "global_registry_plugin.h"
-#include <godot_cpp/classes/dir_access.hpp>
-#include <godot_cpp/classes/file_access.hpp>
-#include <godot_cpp/classes/editor_interface.hpp>
-#include <godot_cpp/variant/utility_functions.hpp>
+
+// Switch ALL of these to quotes so SCons maps them cleanly
+#include "godot_cpp/classes/dir_access.hpp"
+#include "godot_cpp/classes/file_access.hpp"
+#include "godot_cpp/classes/editor_interface.hpp"
+#include "godot_cpp/variant/utility_functions.hpp"
 
 using namespace godot;
-// ... rest of source code
+// ... rest of source code stays exactly the same
+
 
 
 void GlobalRegistryPlugin::_enter_tree() {
