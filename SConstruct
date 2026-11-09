@@ -33,11 +33,6 @@ if "api_version" not in ARGUMENTS and godot_version:
     ARGUMENTS["api_version"] = godot_version
 
 env = Environment(tools=["default"], PLATFORM="")
-env.Append(CPPPATH=[
-    "godot-cpp/include",
-    "godot-cpp/gen/include",
-    "godot-cpp/gdextension"
-])
 customs = [os.path.abspath("custom.py")]
 opts = Variables(customs, ARGUMENTS)
 
