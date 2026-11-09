@@ -4,9 +4,11 @@
 #include <godot_cpp/classes/file_access.hpp>
 #include <godot_cpp/classes/editor_interface.hpp>
 #include <godot_cpp/variant/utility_functions.hpp>
-
-// ADD THIS EXTENSION INCLUDE TO SOLVE THE UNKNOWN DECLARATION ERRORS:
 #include <godot_cpp/classes/resource_loader.hpp>
+
+// ADD THESE TWO DEFINITIONS TO COMPLETE THE FORWARD DECLARATIONS:
+#include <godot_cpp/classes/script.hpp>
+#include <godot_cpp/classes/texture2d.hpp>
 
 
 using namespace godot;
