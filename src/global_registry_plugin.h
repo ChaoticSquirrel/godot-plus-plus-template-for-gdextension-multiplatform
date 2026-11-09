@@ -1,7 +1,7 @@
 #ifndef GLOBAL_REGISTRY_PLUGIN_H
 #define GLOBAL_REGISTRY_PLUGIN_H
 
-#include <godot_cpp/classes/editor_plugin.hpp>
+#include <godot-cpp/include/godot_cpp/classes/editor_plugin.hpp>
 
 namespace godot {
 
