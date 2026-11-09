@@ -1,8 +1,12 @@
-#include <godot-cpp/include/godot_cpp/classes/dir_access.hpp>
-#include <godot-cpp/include/godot_cpp/classes/file_access.hpp>
-#include <godot-cpp/include/godot_cpp/classes/editor_interface.hpp>
+#include "global_registry_plugin.h"
+#include <godot_cpp/classes/dir_access.hpp>
+#include <godot_cpp/classes/file_access.hpp>
+#include <godot_cpp/classes/editor_interface.hpp>
+#include <godot_cpp/variant/utility_functions.hpp>
 
 using namespace godot;
+// ... rest of source code
+
 
 void GlobalRegistryPlugin::_enter_tree() {
     String global_repo_path = "user://../GodotGlobalRegistry/"; 
