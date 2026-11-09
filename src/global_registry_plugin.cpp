@@ -1,10 +1,13 @@
 #include "global_registry_plugin.h"
 
-// Switch ALL of these to quotes so SCons maps them cleanly
-#include "godot_cpp/classes/dir_access.hpp"
-#include "godot_cpp/classes/file_access.hpp"
-#include "godot_cpp/classes/editor_interface.hpp"
-#include "godot_cpp/variant/utility_functions.hpp"
+#include <godot_cpp/classes/dir_access.hpp>
+#include <godot_cpp/classes/file_access.hpp>
+#include <godot_cpp/classes/editor_interface.hpp>
+#include <godot_cpp/variant/utility_functions.hpp>
+
+// ADD THIS EXTENSION INCLUDE TO SOLVE THE UNKNOWN DECLARATION ERRORS:
+#include <godot_cpp/classes/resource_loader.hpp>
+
 
 using namespace godot;
 // ... rest of source code stays exactly the same
@@ -80,15 +83,15 @@ void GlobalRegistryPlugin::_register_custom_user_nodes(String folder_path) {
 
     Ref<Script> loaded_script = ResourceLoader::get_singleton()->load(script_path);
     if (loaded_script.is_valid()) {
-        // Load custom icon if it exists, otherwise pass a null reference to let Godot fall back to the base icon
         Ref<Texture2D> icon_tex;
         if (FileAccess::file_exists(icon_path)) {
             icon_tex = ResourceLoader::get_singleton()->load(icon_path);
         }
 
-        EditorInterface::get_singleton()->get_editor_plugin_base()->add_custom_type(
-            node_name, base_type, loaded_script, icon_tex
-        );
-        UtilityFunctions::print("Registered: ", node_name, " (", base_type, ") -> [", category, "]");
+        // CORRECTED C++ CALL: Use 'this->' directly instead of 'EditorInterface::get_editor_plugin_base()'
+        this->add_custom_type(node_name, base_type, loaded_script, icon_tex);
+        
+        UtilityFunctions::print("Registered custom user node: ", node_name);
     }
+
 }

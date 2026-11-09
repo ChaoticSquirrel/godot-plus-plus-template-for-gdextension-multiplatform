@@ -1,11 +1,11 @@
 #include "register_types.h"
 #include "global_registry_plugin.h"
 
-// Swap to quotes here too
-#include "gdextension_interface.h"
-#include "godot_cpp/core/class_db.hpp"
-#include "godot_cpp/core/defs.hpp"
-#include "godot_cpp/godot.hpp"
+#include <gdextension_interface.h>
+#include <godot_cpp/core/class_db.hpp>
+#include <godot_cpp/core/defs.hpp>
+#include <godot_cpp/godot.hpp>
+
 
 using namespace godot;
 // ... rest of entry code stays exactly the same

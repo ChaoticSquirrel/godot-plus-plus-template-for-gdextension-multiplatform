@@ -1,8 +1,8 @@
 #ifndef GLOBAL_REGISTRY_PLUGIN_H
 #define GLOBAL_REGISTRY_PLUGIN_H
 
-// Change the angle brackets to double quotes!
 #include "godot_cpp/classes/editor_plugin.hpp"
+
 
 namespace godot {
 // ... rest of header code stays exactly the same
